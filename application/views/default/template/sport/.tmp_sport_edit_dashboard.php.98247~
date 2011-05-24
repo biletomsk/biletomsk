@@ -1,0 +1,265 @@
+<div id="dashboard">
+    <h2 class="ico_mug">Редактирование спорта <?php echo stripslashes($detail->sp_name); ?></h2>
+    <div class="clearfix">
+        <div id="tabs">
+            <ul>
+                <li>
+                    <a href="#tabs-1">Кратко</a>
+                </li>
+                <li>
+                    <a href="#tabs-2">Описание</a>
+                </li>
+                <li>
+                    <a href="#tabs-3">SEO</a>
+                </li>
+                <li>
+                    <a href="#tabs-4">Подменю</a>
+                </li>
+                <li>
+                    <a href="#tabs-5">Соревнования</a>
+                </li>
+            </ul>
+            <div id="tabs-1">
+                <form action="<?php echo base_url();?>sport/update/<?php echo $detail->sp_ids;?>" enctype="multipart/form-data" method="post">
+                <table width="570" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <label for="name">
+                                Название вида спорта: 
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" name="sp_name" id="name" value="<?php echo stripslashes(htmlspecialchars($detail->sp_name));?>"/>
+                        </td>
+                        <td>
+                            <input type="hidden" id="sportid" value="<?php echo $detail->sp_ids;?>"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="name">
+                                Название вида спорта (транслитерация): 
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" name="sp_transl" id="name" value="<?php echo stripslashes(htmlspecialchars($detail->sp_transl));?>"/>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="146">
+                            <img src="http://www.biletomsk.ru/sport/logo/<?php echo $detail->sp_img;?>" />Логотип (100х100)
+                        </td>
+                        <td width="235">
+                            <input type="file" name="LOGO"/>
+                        </td>
+                        <td width="219">
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="tabs-2">
+                <table width="570" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td colspan="3">
+                            <p>
+                                Описание вида спорта
+                            </p>
+                            <textarea name="sp_txt" style="width:100%; height:500px;">
+                                <?php echo $detail->sp_txt; ?>
+                            </textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="tabs-3">
+                <table width="570" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            Meta TITLE
+                        </td>
+                        <td>
+                            <input name="par_tile" type="text" id="percent" size="50" value="<?php echo @stripslashes($seo->par_tile); ?>"/>
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Meta KEYWORD
+                        </td>
+                        <td>
+                            <textarea cols="50" rows="3" name="par_keywords">
+                                <?php echo @stripslashes($seo->par_keywords); ?>
+                            </textarea>
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Mets DESCRIPTION
+                        </td>
+                        <td>
+                            <textarea cols="50" rows="3" name="par_description">
+                                <?php echo @stripslashes($seo->par_description); ?>
+                                	
+                            </textarea>
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="tabs-4">
+                <table width="570" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            Общие правила
+                        </td>
+                        <td>
+                            <input type="checkbox" <?php echo($detail->sp_1 == '1') ? 'checked="checked" value="1"' : ' '; ?> name="obj_1"/>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="#" id="dialog_link" title="pravila" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>редактировать</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Новости
+                        </td>
+                        <td>
+                            <input type="checkbox" <?php echo($detail->sp_2 == '1') ? 'checked="checked" value="1"' : ' '; ?> name="obj_2"/>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="#" id="dialog_link" title="gallery" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>редактировать</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ссылки
+                        </td>
+                        <td>
+                            <input type="checkbox" <?php echo($detail->sp_3 == '1') ? 'checked="checked" value="1"' : ' '; ?> name="obj_3"/>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="#" id="dialog_link" title="feedback" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>редактировать</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Отзывы
+                        </td>
+                        <td>
+                            <input type="checkbox" <?php echo($detail->sp_4 == '1') ? 'checked="checked" value="1"' : ''; ?> name="obj_4"/>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="#" id="dialog_link" title="news" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>редактировать</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Соревнования
+                        </td>
+                        <td>
+                            <input type="checkbox" <?php echo($detail->sp_5 == '1') ? 'checked="checked" value="1"' : ''; ?> name="obj_5"/>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="#" id="dialog_link" title="sheme_of_hall" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>редактировать</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="name">
+                                Данные счетчика: 
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" name="cou_v" id="name" value="<?php echo $stat->cou_v ? $stat->cou_v : '0';  ?>"/>
+                        </td>
+                        <td>
+                            <input type="text" name="cou_vd" id="name" value="<?php echo $stat->cou_vd ? $stat->cou_vd : '0';  ?>"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="tabs-5">
+                <div class="clearfix">
+                    <table id="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" class="noborder" />
+                                </th>
+                                <th>
+                                    Дата
+                                </th>
+                                <th>
+                                    Название
+                                </th>
+                                <th>
+                                    Действия
+                                </th>
+                                <th>
+                                    Статус
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
+                            foreach ($compit as $row) 
+							{
+                            
+                                echo '<tr>
+                            				<td class="table_check"><input type="checkbox" class="noborder" /></td>
+                            				<td class="table_date">'.$row->sps_date.'</td>
+                            				<td class="table_title"><a href="'.base_url().'submenu/edit_competition/'.$row->sps_ids.'">'.stripslashes($row->sps_name).'</a></td>
+                            			
+                            				<td>
+                            				<a id="delete" href="'.base_url().'sport/delete_competition/'.$row->sps_ids.'"><img src="'.base_url().'img/cancel.jpg" alt="cancel"/></a>
+                            				<a href="'.base_url().'submenu/edit_competition/'.$row->sps_ids.'"><img src="'.base_url().'img/edit.jpg" alt="edit"/></a></td>
+                            				';
+                            				
+                                echo '<td><span class="approved">отображается</span></td>';
+                            
+                                
+                                echo '</tr>';
+                            }
+                            ?>
+                        </tbody>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <div class="sub_dash">
+                                    <a href="">назад</a>
+                                    | <input class="button" type="submit" value="Обновить" name="do"/>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

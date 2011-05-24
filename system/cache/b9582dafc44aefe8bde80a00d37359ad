@@ -1,0 +1,427 @@
+1256811344TS---><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Панель управления.</title>
+	<meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index,follow" />
+	
+    <link rel="stylesheet" type="text/css" media="all" href="http://admin.biletomsk.ru/css/style.css" />
+	<link rel="Stylesheet" type="text/css" href="http://admin.biletomsk.ru/css/smoothness/jquery-ui-1.7.1.custom.css"  />	
+	<!--[if IE 7]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+	<!--[if IE 6]><link rel="stylesheet" href="css/ie6.css" type="text/css" media="screen, projection" /><![endif]-->
+	<link rel="stylesheet" type="text/css" href="http://admin.biletomsk.ru/css/superfish.css" media="screen">
+	<link href="http://admin.biletomsk.ru/css/default.css" rel="stylesheet" type="text/css" />
+	<link href="http://admin.biletomsk.ru/css/uploadify.css" rel="stylesheet" type="text/css" />
+	<!--[if IE]>
+		<style type="text/css">
+		  .clearfix {
+		    zoom: 1;     /* triggers hasLayout */
+		    display: block;     /* resets display for IE/Win */
+		    }  /* Only IE can see inside the conditional comment
+		    and read this CSS rule. Don't ever use a normal HTML
+		    comment inside the CC or it will close prematurely. */
+		</style>
+	<![endif]-->
+	<!-- JavaScript -->
+	<script type="text/javascript" language="javascript" src="http://admin.biletomsk.ru/js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="http://admin.biletomsk.ru/js/jquery-ui-1.7.1.custom.min.js"></script>
+	<script type="text/javascript" src="http://admin.biletomsk.ru/js/template/.js"></script>
+	<script type="text/javascript" src="http://admin.biletomsk.ru/js/jquery.selectfiller.js"></script>
+	<script type="text/javascript" src="http://admin.biletomsk.ru/js/i18n/jquery-ui-i18n.js" ></script>
+	<script type="text/javascript" src="http://admin.biletomsk.ru/js/hoverIntent.js"></script>
+	<script type="text/javascript" src="http://admin.biletomsk.ru/js/superfish.js"></script>
+	<script type="text/javascript">
+		// initialise plugins
+		$(function(){
+			$('ul.sf-menu').superfish();
+		});
+
+
+	</script>
+	<!--<script type="text/javascript" src="http://admin.biletomsk.ru/js/excanvas.pack.js"></script>-->
+	<script type="text/javascript" src="http://admin.biletomsk.ru/js/jquery.flot.pack.js"></script>
+
+  	<script type="text/javascript" src="http://admin.biletomsk.ru/js/custom.js"></script>
+	<script type="text/javascript" src="http://admin.biletomsk.ru/js/tiny_mce/tiny_mce.js"></script>
+
+
+
+		<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+
+		<script type="text/javascript" language="javascript" src="http://admin.biletomsk.ru/js/uploadify/jquery.uploadify.v2.1.0.min.js"></script>
+
+
+	 <!--[if IE]><script language="javascript" type="text/javascript" src="excanvas.pack.js"></script><![endif]-->
+</head>
+<body>
+<div class="container" id="container">
+<div  id="header">
+	<div id="profile_info">
+			<img src="http://admin.biletomsk.ru/img/avatar.jpg" id="avatar" alt="avatar" />
+			<p>Добро пожаловать <strong>администратор</strong>. <a href="http://admin.biletomsk.ru/index/logout">выйти?</a></p>
+			<p class="last_login">Последний вход: 21:03 12.05.2009</p>
+		</div>
+		<div id="logo"><h1><a href="/">Панель управления</a></h1></div>
+		
+</div><!-- end header --><div id="content" >
+	<div id="top_menu" class="clearfix">
+	<!--	<ul class="sf-menu"> <!-- DROPDOWN MENU
+			<li class="current">
+				<a href="#a">Настройки</a><!-- First level MENU
+				<ul>
+					<li>
+						<a href="#aa">Database options</a>
+					</li>
+					<li class="current">
+						<a href="#ab">Blog settings</a> <!-- Second level MENU 
+						<ul>
+							<li class="current"><a href="#">Settings</a></li>
+							<li><a href="#aba">menu item</a></li>
+							<li><a href="#abb">menu item</a></li>
+							<li><a href="#abc">menu item</a></li>
+							<li><a href="#abd">menu item</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Menu Options</a> <!-- Third level MENU
+						<ul>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Editor</a>
+						<ul>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+							<li><a href="#">menu item</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+
+
+	
+
+		</ul>
+		-->
+			<a href="#" id="visit" class="right">Перейти на сайт</a>
+	    </div>
+		<div id="content_main" class="clearfix">
+			<div id="main_panel_container" class="left">
+            
+            <div id="dashboard">
+				<h2 class="ico_mug">Обзор консультантов</h2>
+				<div class="clearfix">
+										<br/>
+					<table id="table">
+			<thead>
+			<tr>
+				<th><input type="checkbox" class="noborder" /></th>
+				
+				<th>Название</th>
+				<th>Категория</th>
+				<th>Действия</th>
+				<th>Ответы/Новые</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+					<td class="table_check"><input type="checkbox" class="noborder" /></td>
+					
+					<td class="table_title"><a href="http://admin.biletomsk.ru/consultation/edit/25">Бюро путешествий №1</a></td>
+					<td><a href="http://admin.biletomsk.ru/consultation/show_category/3">Консультаци турфирм Омска</a></td>
+					<td>
+					<a id="delete" href="http://admin.biletomsk.ru/consultation/delete/25"><img src="http://admin.biletomsk.ru/img/cancel.jpg" alt="cancel"/></a>
+					<a href="http://admin.biletomsk.ru/consultation/edit/25"><img src="http://admin.biletomsk.ru/img/edit.jpg" alt="edit"/></a></td>
+					<td>0/3</td></tr><tr>
+					<td class="table_check"><input type="checkbox" class="noborder" /></td>
+					
+					<td class="table_title"><a href="http://admin.biletomsk.ru/consultation/edit/24">Медицинский центр  "СКЦ"</a></td>
+					<td><a href="http://admin.biletomsk.ru/consultation/show_category/10">Консультации по медицине</a></td>
+					<td>
+					<a id="delete" href="http://admin.biletomsk.ru/consultation/delete/24"><img src="http://admin.biletomsk.ru/img/cancel.jpg" alt="cancel"/></a>
+					<a href="http://admin.biletomsk.ru/consultation/edit/24"><img src="http://admin.biletomsk.ru/img/edit.jpg" alt="edit"/></a></td>
+					<td>0/3</td></tr><tr>
+					<td class="table_check"><input type="checkbox" class="noborder" /></td>
+					
+					<td class="table_title"><a href="http://admin.biletomsk.ru/consultation/edit/23">Медицинский центр Центр пластической хирургии доктора Пуценко</a></td>
+					<td><a href="http://admin.biletomsk.ru/consultation/show_category/10">Консультации по медицине</a></td>
+					<td>
+					<a id="delete" href="http://admin.biletomsk.ru/consultation/delete/23"><img src="http://admin.biletomsk.ru/img/cancel.jpg" alt="cancel"/></a>
+					<a href="http://admin.biletomsk.ru/consultation/edit/23"><img src="http://admin.biletomsk.ru/img/edit.jpg" alt="edit"/></a></td>
+					<td>0/3</td></tr><tr>
+					<td class="table_check"><input type="checkbox" class="noborder" /></td>
+					
+					<td class="table_title"><a href="http://admin.biletomsk.ru/consultation/edit/22">Детский медицинский центр "До 16-ти"</a></td>
+					<td><a href="http://admin.biletomsk.ru/consultation/show_category/10">Консультации по медицине</a></td>
+					<td>
+					<a id="delete" href="http://admin.biletomsk.ru/consultation/delete/22"><img src="http://admin.biletomsk.ru/img/cancel.jpg" alt="cancel"/></a>
+					<a href="http://admin.biletomsk.ru/consultation/edit/22"><img src="http://admin.biletomsk.ru/img/edit.jpg" alt="edit"/></a></td>
+					<td>0/3</td></tr><tr>
+					<td class="table_check"><input type="checkbox" class="noborder" /></td>
+					
+					<td class="table_title"><a href="http://admin.biletomsk.ru/consultation/edit/21">Интернет-провайдер "Новые технологии"</a></td>
+					<td><a href="http://admin.biletomsk.ru/consultation/show_category/9">Консультации по интернету</a></td>
+					<td>
+					<a id="delete" href="http://admin.biletomsk.ru/consultation/delete/21"><img src="http://admin.biletomsk.ru/img/cancel.jpg" alt="cancel"/></a>
+					<a href="http://admin.biletomsk.ru/consultation/edit/21"><img src="http://admin.biletomsk.ru/img/edit.jpg" alt="edit"/></a></td>
+					<td>0/3</td></tr><tr>
+					<td class="table_check"><input type="checkbox" class="noborder" /></td>
+					
+					<td class="table_title"><a href="http://admin.biletomsk.ru/consultation/edit/20">Мир желаний</a></td>
+					<td><a href="http://admin.biletomsk.ru/consultation/show_category/3">Консультаци турфирм Омска</a></td>
+					<td>
+					<a id="delete" href="http://admin.biletomsk.ru/consultation/delete/20"><img src="http://admin.biletomsk.ru/img/cancel.jpg" alt="cancel"/></a>
+					<a href="http://admin.biletomsk.ru/consultation/edit/20"><img src="http://admin.biletomsk.ru/img/edit.jpg" alt="edit"/></a></td>
+					<td>0/3</td></tr><tr>
+					<td class="table_check"><input type="checkbox" class="noborder" /></td>
+					
+					<td class="table_title"><a href="http://admin.biletomsk.ru/consultation/edit/19">Творческое Объединение СКАЗ</a></td>
+					<td><a href="http://admin.biletomsk.ru/consultation/show_category/8">Консультации по рекламе</a></td>
+					<td>
+					<a id="delete" href="http://admin.biletomsk.ru/consultation/delete/19"><img src="http://admin.biletomsk.ru/img/cancel.jpg" alt="cancel"/></a>
+					<a href="http://admin.biletomsk.ru/consultation/edit/19"><img src="http://admin.biletomsk.ru/img/edit.jpg" alt="edit"/></a></td>
+					<td>0/3</td></tr><tr>
+					<td class="table_check"><input type="checkbox" class="noborder" /></td>
+					
+					<td class="table_title"><a href="http://admin.biletomsk.ru/consultation/edit/18">Врачебная практика</a></td>
+					<td><a href="http://admin.biletomsk.ru/consultation/show_category/10">Консультации по медицине</a></td>
+					<td>
+					<a id="delete" href="http://admin.biletomsk.ru/consultation/delete/18"><img src="http://admin.biletomsk.ru/img/cancel.jpg" alt="cancel"/></a>
+					<a href="http://admin.biletomsk.ru/consultation/edit/18"><img src="http://admin.biletomsk.ru/img/edit.jpg" alt="edit"/></a></td>
+					<td>0/3</td></tr><tr>
+					<td class="table_check"><input type="checkbox" class="noborder" /></td>
+					
+					<td class="table_title"><a href="http://admin.biletomsk.ru/consultation/edit/17">Супермаркет кондиционеров</a></td>
+					<td><a href="http://admin.biletomsk.ru/consultation/show_category/11">Консультации по оборудованию для бизнеса</a></td>
+					<td>
+					<a id="delete" href="http://admin.biletomsk.ru/consultation/delete/17"><img src="http://admin.biletomsk.ru/img/cancel.jpg" alt="cancel"/></a>
+					<a href="http://admin.biletomsk.ru/consultation/edit/17"><img src="http://admin.biletomsk.ru/img/edit.jpg" alt="edit"/></a></td>
+					<td>0/3</td></tr><tr>
+					<td class="table_check"><input type="checkbox" class="noborder" /></td>
+					
+					<td class="table_title"><a href="http://admin.biletomsk.ru/consultation/edit/16">Компания "Главторгбизнес"</a></td>
+					<td><a href="http://admin.biletomsk.ru/consultation/show_category/11">Консультации по оборудованию для бизнеса</a></td>
+					<td>
+					<a id="delete" href="http://admin.biletomsk.ru/consultation/delete/16"><img src="http://admin.biletomsk.ru/img/cancel.jpg" alt="cancel"/></a>
+					<a href="http://admin.biletomsk.ru/consultation/edit/16"><img src="http://admin.biletomsk.ru/img/edit.jpg" alt="edit"/></a></td>
+					<td>0/3</td></tr><tr>
+					<td class="table_check"><input type="checkbox" class="noborder" /></td>
+					
+					<td class="table_title"><a href="http://admin.biletomsk.ru/consultation/edit/15">Многопрофильный центр современной медицины "Евромед"</a></td>
+					<td><a href="http://admin.biletomsk.ru/consultation/show_category/10">Консультации по медицине</a></td>
+					<td>
+					<a id="delete" href="http://admin.biletomsk.ru/consultation/delete/15"><img src="http://admin.biletomsk.ru/img/cancel.jpg" alt="cancel"/></a>
+					<a href="http://admin.biletomsk.ru/consultation/edit/15"><img src="http://admin.biletomsk.ru/img/edit.jpg" alt="edit"/></a></td>
+					<td>0/3</td></tr><tr>
+					<td class="table_check"><input type="checkbox" class="noborder" /></td>
+					
+					<td class="table_title"><a href="http://admin.biletomsk.ru/consultation/edit/14">Клиника доктора Яковлева</a></td>
+					<td><a href="http://admin.biletomsk.ru/consultation/show_category/10">Консультации по медицине</a></td>
+					<td>
+					<a id="delete" href="http://admin.biletomsk.ru/consultation/delete/14"><img src="http://admin.biletomsk.ru/img/cancel.jpg" alt="cancel"/></a>
+					<a href="http://admin.biletomsk.ru/consultation/edit/14"><img src="http://admin.biletomsk.ru/img/edit.jpg" alt="edit"/></a></td>
+					<td>0/3</td></tr><tr>
+					<td class="table_check"><input type="checkbox" class="noborder" /></td>
+					
+					<td class="table_title"><a href="http://admin.biletomsk.ru/consultation/edit/13">Медицинский центр "Авиценна"</a></td>
+					<td><a href="http://admin.biletomsk.ru/consultation/show_category/10">Консультации по медицине</a></td>
+					<td>
+					<a id="delete" href="http://admin.biletomsk.ru/consultation/delete/13"><img src="http://admin.biletomsk.ru/img/cancel.jpg" alt="cancel"/></a>
+					<a href="http://admin.biletomsk.ru/consultation/edit/13"><img src="http://admin.biletomsk.ru/img/edit.jpg" alt="edit"/></a></td>
+					<td>0/3</td></tr><tr>
+					<td class="table_check"><input type="checkbox" class="noborder" /></td>
+					
+					<td class="table_title"><a href="http://admin.biletomsk.ru/consultation/edit/12">Администрация БилетОмск.ру</a></td>
+					<td><a href="http://admin.biletomsk.ru/consultation/show_category/9">Консультации по интернету</a></td>
+					<td>
+					<a id="delete" href="http://admin.biletomsk.ru/consultation/delete/12"><img src="http://admin.biletomsk.ru/img/cancel.jpg" alt="cancel"/></a>
+					<a href="http://admin.biletomsk.ru/consultation/edit/12"><img src="http://admin.biletomsk.ru/img/edit.jpg" alt="edit"/></a></td>
+					<td>0/3</td></tr>
+			
+			</tbody>
+		</table>
+			<div id="table_options" class="clearfix">
+				
+				<ul>
+					<li><a href="#">Выбрать все</a></li>
+					<li><a href="#">Снять все</a></li>
+				
+				
+				
+				</ul>
+				
+				
+			</div>
+			
+			
+							</div>
+			</div><!-- end #dashboard -->
+			            
+			
+			
+			
+			
+			<div id="shortcuts" class="clearfix">
+				<h2 class="ico_mug">Быстрый доступ</h2>
+				<ul>
+					<li class="first_li"><a href=""><img src="http://admin.biletomsk.ru/img/theme.jpg" alt="themes" /><span>Объекты</span></a></li>
+					<li><a href=""><img src="http://admin.biletomsk.ru/img/statistic.jpg" alt="statistics" /><span>Статистика</span></a></li>
+					<li><a href=""><img src="http://admin.biletomsk.ru/img/ftp.jpg" alt="FTP" /><span>Файлы</span></a></li>
+					<li><a href=""><img src="http://admin.biletomsk.ru/img/users.jpg" alt="Users" /><span>Пользователи</span></a></li>
+					<li><a href=""><img src="http://admin.biletomsk.ru/img/comments.jpg" alt="Comments" /><span>Комментарии</span></a></li>
+					<li><a href=""><img src="http://admin.biletomsk.ru/img/gallery.jpg" alt="Gallery" /><span>Фотоотчеты</span></a></li>
+					<li><a href=""><img src="http://admin.biletomsk.ru/img/security.jpg" alt="Security" /><span>Безопасность</span></a></li>
+					
+				</ul>
+			</div><!-- end #shortcuts -->
+			</div>
+			<div id="sidebar" class="right">
+							<h2 class="ico_mug">Меню</h2>
+			<ul id="menu">
+				<li>
+					<a href="#" class="ico_posts">Новости</a>
+					<ul>
+						<li><a href="http://admin.biletomsk.ru/news/add">Добавить новость</a></li>
+						<li><a href="http://admin.biletomsk.ru/news">Обзор новостей</a></li>
+						<li><a href="http://admin.biletomsk.ru/news/category">Категории</a></li>
+						<li><a href="http://admin.biletomsk.ru/news/archive">Архив</a></li>
+					</ul>
+					<a href="#" class="ico_page">Объекты</a>
+					<ul>
+						<li><a href="http://admin.biletomsk.ru/object/add">Добавить объект</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/base-relax">Базы отдыха</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/bany-sauni">Бани и сауны</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/basseiny">Бассейны</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/pools">Бильярд</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/bowling">Боулинг</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/hotels-motels">Гостиницы</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/detam-dosugs">Детский досуг</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/suppliers">Для бизнеса</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/dostavka-food">Доставка еды</a></li> 
+						<!--<li><a href="http://admin.biletomsk.ru/object/show_category/casino-games">Казино</a></li>--> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/kafe">Кафе</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/kino">Кинотеатры Омска</a></li> 
+	 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/kofeiny">Кофейни</a></li> 
+						<!--<li><a href="http://admin.biletomsk.ru/object/show_category/detam-shop">Магазины для детей</a></li>--> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/med-cenres">Медицинские центры</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/museum">Музеи</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/night-clubs">Ночные клубы</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/detam-obrazovatelnye-centry">Образование</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/prazdniki-na-zakaz">Праздники на заказ</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/razvlekatelniy-complex">Развлекательные комплексы </a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/restorans">Рестораны Омска</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/salony-krasoty">Салоны красоты</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/sport">Спорт</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/sports-clubs">Спортклубы</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/stadiony-areny">Стадионы</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/teart">Театры, филармония</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/travels">Турфирмы Омска</a></li> 
+						<li><a href="http://admin.biletomsk.ru/object/show_category/fast-foods">Фаст-фуды</a></li> 
+	                    <li><a href="http://admin.biletomsk.ru/object/show_category/cirk"> Цирк</a></li> 
+							
+					</ul>
+					<!--
+					<a href="#" class="ico_user">Афиша</a>
+					<ul>
+						<li><a href="#">Добавить</a></li>
+						<li><a href="#">Обзор</a></li>
+						<li><a href="#">Manage users</a></li>
+					</ul>-->
+					<a href="#" class="ico_settings">Статьи</a>
+					<ul>
+						<li><a href="http://admin.biletomsk.ru/articles/add">Добавить</a></li>
+						<li><a href="http://admin.biletomsk.ru/articles/">Обзор статей</a></li>
+						<li><a href="http://admin.biletomsk.ru/articles/category">Категории</a></li>
+					</ul>
+					<a href="#" class="ico_settings">Спорт</a>
+					<ul>
+						<li><a href="http://admin.biletomsk.ru/sport/add">Добавить</a></li>
+						<li><a href="http://admin.biletomsk.ru/sport">Обзор видов спорта</a></li>
+						<li><a href="http://admin.biletomsk.ru/sport/competition">Соревнования</a></li>
+						<li><a href="http://admin.biletomsk.ru/sport/add_competition">Добавить соревнования</a></li>
+					</ul>
+					<a href="#" class="ico_settings">Фотоотчеты</a>
+					<ul>
+						<li><a href="http://admin.biletomsk.ru/photoarchive/add">Добавить</a></li>
+						<li><a href="http://admin.biletomsk.ru/photoarchive/">Обзор</a></li>
+						<li><a href="http://admin.biletomsk.ru/photoarchive/category">Категории</a></li>
+					</ul>
+                    
+                    <a href="#" class="ico_settings">Консультации</a>
+					<ul>
+						<li><a href="http://admin.biletomsk.ru/consultation/add">Добавить консультанта</a></li>
+						<li><a href="http://admin.biletomsk.ru/consultation/">Обзор</a></li>
+						<li><a href="http://admin.biletomsk.ru/consultation/new_questions">Новые вопросы</a></li>
+						<li><a href="http://admin.biletomsk.ru/consultation/answer_question">Обзор "вопрос-ответ"</a></li>
+						<li><a href="http://admin.biletomsk.ru/consultation/category">Категории консультантов</a></li>
+					</ul>
+					<!--
+					<a href="#" class="ico_settings">Конкурсы</a>
+					<ul>
+						<li><a href="http://admin.biletomsk.ru/contests/add">Добавить</a></li>
+						<li><a href="http://admin.biletomsk.ru/contests/present">Обзор текущих</a></li>
+						<li><a href="http://admin.biletomsk.ru/contests/past">Обзор прошедших</a></li>
+					</ul>
+					<a href="#" class="ico_settings">ТВ</a>
+					<ul>
+						<li><a href="#">Database</a></li>
+						<li><a href="#">Themes</a></li>
+						<li><a href="#">Options</a></li>
+					</ul> 
+                    
+                    <a href="#" class="ico_settings">События</a>
+					<ul>
+						<li><a href="#">Database</a></li>
+						<li><a href="#">Themes</a></li>
+						<li><a href="#">Options</a></li>
+					</ul> --> 
+					<a href="#" class="ico_settings">Скидки</a>
+					<ul>
+						<li><a href="http://admin.biletomsk.ru/discounts/add">Добавить</a></li>
+						<li><a href="http://admin.biletomsk.ru/discounts">Обзор текущих акций</a></li>
+						<li><a href="http://admin.biletomsk.ru/discounts/category">Обзор категорий</a></li>
+						<li><a href="http://admin.biletomsk.ru/discounts/category_add">Добавить категорию</a></li>
+						<li><a href="http://admin.biletomsk.ru/discounts/scategory">Обзор подкатегорий</a></li>
+					</ul>
+					<!--
+					<a href="#" class="ico_settings">Пользователи</a>
+					<ul>
+						<li><a href="http://admin.biletomsk.ru/users">Обзор</a></li>
+						<li><a href="http://admin.biletomsk.ru/users/add">Добавить</a></li>
+						<li><a href="http://admin.biletomsk.ru/group">Группы</a></li>
+					</ul>
+                    
+					<a href="#" class="ico_settings">Банеры</a>
+					<ul>
+						<li><a href="http://admin.biletomsk.ru/banners/add">Добавить</a></li>
+						<li><a href="http://admin.biletomsk.ru/banners/">Обзор</a></li>
+						<li><a href="#">Options</a></li>
+					</ul>-->
+                                                         
+				</li>
+		
+				
+			</ul>
+
+
+			</div><!-- end #sidebar -->
+		</div><!-- end #content_main -->﻿</div><!-- end #content -->
+		
+<div  id="footer" class="clearfix">
+	<p class="left">БилетОмск.Ру - Панель управления</p>
+		<p class="right">Использование памяти: {memory_usage} | Генерация за 0.0879</p>
+	</div><!-- end #footer -->
+</div><!-- end container -->
+
+</body>
+</html>

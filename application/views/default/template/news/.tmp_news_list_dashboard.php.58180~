@@ -1,0 +1,84 @@
+<div id="dashboard">
+				<h2 class="ico_mug">Обзор новостей</h2>
+				<div class="clearfix">
+					<?php echo @$message;?>
+					<br/>
+					<table id="table">
+			<thead>
+			<tr>
+				<th><input type="checkbox" class="noborder" /></th>
+				<th>Дата</th>
+				<th>Название</th>
+				<th>Категория</th>
+				<th>Действия</th>
+				<th>Статус</th>
+			</tr>
+			</thead>
+			<tbody>
+			<?php 
+			
+			foreach ($data as $row)
+			{
+			
+			echo '<tr>
+				<td class="table_check"><input type="checkbox" class="noborder" /></td>
+				<td class="table_date">'.$row->new_st_d.' '.month($row->new_st_m).'</td>
+				<td class="table_title"><a href="'.base_url().'news/edit/'.$row->new_ids.'">'.stripslashes($row->new_name).'</a></td>
+				<td><a href="'.base_url().'category/'.$row->newc_ids.'">'.$row->newc_name.'</a></td>
+				<td><a id="delete" href="'.base_url().'news/delete/'.$row->new_ids.'"><img src="'.base_url().'img/cancel.jpg" alt="cancel"/></a> <a href="'.base_url().'news/edit/'.$row->new_ids.'"><img src="'.base_url().'img/edit.jpg" alt="edit"/></a></td>
+				';
+			
+			//Проверяем статус
+			if($row->new_status == 1)
+			{
+				echo'<td><span class="ico_pending">не отображается</span></td>';	
+			}
+			elseif($row->new_status == 2)
+			{
+				echo'<td><span class="approved">отображается</span></td>';	
+			}	
+
+			
+			echo '</tr>';
+			}
+			?>
+
+			
+			</tbody>
+		</table>
+			<div id="table_options" class="clearfix">
+				
+				<ul>
+					<li><a href="#">Выбрать все</a></li>
+					<li><a href="#">Снять все</a></li>
+					<li><label>	Категория:
+								<select id="kategoria" name="kategoria">
+								<?php foreach($category as $row)
+								{
+									echo '<option value="'.$row->newc_ids.'">'.$row->newc_name.'</option> ';
+								}
+								?>
+
+								</select>
+				</label></li>
+				
+				<li><label>	Дата:<select id="kategoria" name="kategoria">
+									<option value="1">Сегодня</option> 
+									<option value="2">Вчера</option> 
+									<option value="3">За прошлую неделю</option> 
+									<option value="4">За прошлый месяц</option> 
+								</select>
+				</label></li>
+				</ul>
+				
+				
+			</div>
+			<div class="pagination">
+				<span class="pages">Страница 1 из 3&#8201;</span>
+				<span class="current">1</span>
+				<a href="#" title="2">2</a>
+				<a href="#" title="3">3</a>
+				<a href="#" >&raquo;</a>
+			</div>
+				</div>
+			</div><!-- end #dashboard -->

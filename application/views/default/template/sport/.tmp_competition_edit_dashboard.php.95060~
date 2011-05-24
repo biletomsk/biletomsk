@@ -1,0 +1,141 @@
+<div id="dashboard">
+    <h2 class="ico_mug">Редактирование соревнования  <?php echo stripslashes($detail->sps_name); ?></h2>
+    <div class="clearfix">
+        <div id="tabs">
+            <ul>
+                <li>
+                    <a href="#tabs-1">Основное</a>
+                </li>
+                <li>
+                    <a href="#tabs-2">Описание</a>
+                </li>
+                <li>
+                    <a href="#tabs-3">Разное</a>
+                </li>
+
+            </ul>
+            <div id="tabs-1">
+                <form action="<?php echo base_url();?>sport/update_competition/<?php echo $detail->sps_ids;?>" enctype="multipart/form-data" method="post">
+                <table width="570" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <label for="name">
+                                Название соревнования: 
+                            </label>
+                        </td>
+                        <td colspan="2">
+                            <input size="60" type="text" name="sps_name" id="name" value="<?php echo stripslashes(htmlspecialchars($detail->sps_name));?>"/>
+                       
+                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="name">
+                                Категория спорта спорта: 
+                            </label>
+                        </td>
+                        <td>
+                        	<select name="competit_type" id="type">
+                            <?php
+							
+							foreach($category as $row)
+							{
+                                    if ($row->sp_ids == $detail->sps_for) {
+                                        echo '<option selected="selected" value="'.$row->sp_ids.'">'.$row->sp_name.'</option> ';
+                                    } else {
+                                        echo '<option value="'.$row->sp_ids.'">'.$row->sp_name.'</option> ';
+                                    }
+							}
+							
+							?>
+							</select>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="146">
+                              <label for="name">
+                                Дата соревнования: 
+                            </label> </td>
+                        <td width="235">
+                       <input type="text" name="competit_date" id="datepicker" value="<?php echo substr($detail->sps_date,6,2); ?>.<?php echo substr($detail->sps_date,4,2); ?>.<?php echo substr($detail->sps_date,0,4); ?>"/>
+                       
+                        </td>
+                        <td width="219">
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="tabs-2">
+                <table width="570" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td colspan="3">
+                            <p>
+                                Описание соревнования
+                            </p>
+                            <textarea name="sps_txt" style="width:100%; height:500px;">
+                                <?php echo $detail->sps_txt; ?>
+                            </textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="tabs-3">
+                <table width="570" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                        	<p>
+                      <input type="checkbox" <?php echo ($detail->sps_1 == 1)? ' checked="checked"': ''; ?> name="reglament"/>Регламент
+                         </p>
+                        </td>
+                        <td colspan="2">
+                            <textarea name="sps_reglam" rows="3">
+                                <?php echo $detail->sps_reglam; ?>
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <p><input type="checkbox" <?php echo ($detail->sps_3 == 1)? ' checked="checked"': ''; ?> name="raspisanie"/>Расписание</p>
+                        </td>
+                         <td colspan="2">
+                            <textarea cols="50" rows="3" name="par_keywords">
+                                <?php echo $detail->sps_raspisanie; ?>
+                            </textarea>
+                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><input type="checkbox" <?php echo ($detail->sps_2 == 1)? ' checked="checked"': ''; ?> name="raspisanie"/>Рейтинги</p>
+                        </td>
+                         <td colspan="2">
+              				<input type="file" name="ratings">
+                       
+                        </td>
+                    </tr>
+					<tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <div class="sub_dash">
+                                    <a href="">назад</a>
+                                    | <input class="button" type="submit" value="Обновить" name="do"/>
+                                </div>
+                            </td>
+                        </tr>
+                </table>
+            </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>
